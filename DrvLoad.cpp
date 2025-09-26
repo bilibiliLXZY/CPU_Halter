@@ -964,6 +964,6 @@ int main(int argc, char* argv[]){
 	wchar_t drvpath[1024] = { 0 };
 	MultiByteToWideChar(CP_ACP, 0, drvnamea, -1, drvname, sizeof(drvname)/2);
 	MultiByteToWideChar(CP_ACP, 0, "C:\\sysdiag.sys", -1, drvpath, sizeof(drvpath)/2);
-	LoadNTDriver(drvname, drvpath, SERVICE_KERNEL_DRIVER, SERVICE_AUTO_START, L"");
+	LoadNTDriver(drvname, drvpath, SERVICE_KERNEL_DRIVER, SERVICE_DEMAND_START, L"");
 	return 0;
 }
